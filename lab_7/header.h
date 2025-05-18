@@ -26,7 +26,8 @@ public:
     void insert(const string& key);
     string findShortestKey();
     bool isEmpty();
+    bool isFool();
     void print();
 };
 
-#endif //LAB_7_HEADER_H
+#endif //LAB_7_HEADER_H3

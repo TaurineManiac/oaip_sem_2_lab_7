@@ -21,11 +21,14 @@ int main(){
                 "4- Выйти" << endl;
         int solution=checkYourSolution(4);
         if(solution==1){
-            cout << "Введите максимальное количество символов в строке:" << endl;
+            cout << "Введите количество ключей(случайные строки с кол-вом символов от 1 до 10):" << endl;
             int solutionStr= checkTryToInputMaxSizeOfSmth();
-            string rstr= generateRandomString(solutionStr);
+            string rstr;
+            for (int i = 1; i <= solutionStr; i++) {
+                rstr= generateRandomString(10);
+                ht.insert(rstr);
+            }
 
-            ht.insert(rstr);
         }
         else if(solution==2){
             ht.findShortestKey();
